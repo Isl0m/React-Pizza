@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Button = ({children, uniclass=""}) => {
+const Button = ({ onClick, children, uniclass = '' }) => {
   return (
-    <button className={`button ${uniclass}`}>
-        {children}
+    <button className={`button ${uniclass}`} onClick={onClick}>
+      {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
