@@ -9,18 +9,17 @@ const PizzaBlock = ({ id, imageUrl, name, price, sizes, types, onClickAddPizza, 
   const [activeType, setActiveType] = React.useState(types[0]);
   const [activeSize, setActiveSize] = React.useState(0);
 
-  const obj = {
-    id,
-    name,
-    imageUrl,
-    price,
-    type: typesName[activeType],
-    size: sizeName[activeSize],
-  };
-
-  const onAddPizza = React.useCallback(() => {
+  const onAddPizza = () => {
+    const obj = {
+      id,
+      name,
+      imageUrl,
+      price,
+      type: typesName[activeType],
+      size: sizeName[activeSize],
+    };
     onClickAddPizza(obj);
-  });
+  };
 
   return (
     <div className="pizza-block">

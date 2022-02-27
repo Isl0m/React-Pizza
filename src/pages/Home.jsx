@@ -49,12 +49,12 @@ const Home = () => {
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">
         {isLoaded
-          ? items.map((item) => (
+          ? items.map((obj) => (
               <PizzaBlock
                 onClickAddPizza={handleAddPizzaToCart}
-                addedCount={cartItems[item.id] && cartItems[item.id].length}
-                key={item.id}
-                {...item}
+                addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}
+                key={obj.id}
+                {...obj}
               />
             ))
           : Array(12)
