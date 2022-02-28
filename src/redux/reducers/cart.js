@@ -6,21 +6,6 @@ const initialState = {
 
 const getTotalPrice = (arr) => arr.reduce((sum, obj) => obj.price + sum, 0);
 
-const _get = (obj, path) => {
-  const [firstKey, ...keys] = path.split('.');
-  return keys.reduce((val, key) => {
-    return val[key];
-  }, obj[firstKey]);
-};
-
-const getTotalSum = (obj, path) => {
-  console.log(obj);
-  return Object.values(obj).reduce((sum, obj) => {
-    const value = _get(obj, path);
-    return sum + value;
-  }, 0);
-};
-
 const cart = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_PIZZA_CART': {
