@@ -408,8 +408,10 @@ body {
 
   &--empty {
     margin: 0 auto;
-    width: 560px;
+    max-width: 560px;
     text-align: center;
+    @media (max-width: 768px) {
+    }
 
     h2 {
       font-size: 32px;
