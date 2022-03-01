@@ -178,7 +178,7 @@ body {
 
         @media (max-width: 768px) {
           width: 60%;
-          height: 60%;
+          height: 100%;
         }
       }
     }
@@ -334,6 +334,10 @@ body {
     &-details {
       display: flex;
       justify-content: space-between;
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+      }
 
       span {
         font-size: 22px;
